@@ -21,8 +21,7 @@ COMO RODAR O PROJETO (em um ambiente Linux):
         git clone [https://github.com/dufrensmit/desafioestagioutech]
         cd desafioestagioutech
 
-        crie a pasta venv:
-            python3 -m venv venv
+        python3 -m venv venv
 
         source venv/bin/activate
   
