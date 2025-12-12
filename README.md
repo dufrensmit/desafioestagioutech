@@ -2,7 +2,9 @@
 Desafio para o processo seletivo para estágio na empresa UTech
 
 Backend: feito com Python 3 e Flask
+
 Frontend: HTML5, CSS3 e JavaScript
+
 Comunicação: API REST com a biblioteca 'requests'
 
 Há 2 rotas do backend para o frontend:
