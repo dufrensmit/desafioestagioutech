@@ -23,8 +23,7 @@ Digite no terminal (seja no Linux em si ou no terminal integrado do VSCode):
 sudo apt update
 sudo apt install python3-pip python3-venv
 
-git clone [https://github.com/dufrensmit/desafioestagioutech](https://github.com/dufrensmit/desafioestagioutech)
-cd desafioestagioutech
+git clone https://github.com/dufrensmit/desafioestagioutech
 
 pip install -r requirements.txt
 python3 app.py
