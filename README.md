@@ -27,7 +27,8 @@ COMO RODAR O PROJETO (em um ambiente Linux):
 
         python3 app.py
 
-    acesso no seu navegador:
+   acesse no seu navegador:
+        
         http://127.0.0.1:5000
 
 #projeto por Lucas Martins Lowen
