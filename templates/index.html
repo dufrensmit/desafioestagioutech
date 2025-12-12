@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio uTech - Lucas Lowen</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>♖ Desafio Estágio uTech ♖</h1>
+        <h4>por Lucas Lowen</h4>
+        <h2>Escolha um dos modos abaixos para gerar perguntas.</h2>
+
+        <div class="secao-botoes">
+            <h3> Modo Padrão</h3>
+            <p>Gera 3 perguntas fáceis, 2 médias e 1 difícil</p>
+            <button onclick="carregarPerguntas()">Carregar Perguntas</button>
+        </div>
+
+        <div class="secao-botoes" style="border-top: 1px solid #eee; margin-top: 20px; padding-top: 10px;">
+            <h3>Modo do Lucas</h3>
+            <p>Perguntas das categorias que o Lucas gosta (jogos de tabuleiro, filmes e videogame)</p>
+            <button onclick="carregarFavoritas()" style="background-color: #6f42c1;">
+                Carregar Desafio do Lucas
+            </button>
+        </div>
+
+        <hr>
+        
+
+        <div id="lista-perguntas" class="cards-container">
+            </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
