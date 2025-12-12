@@ -22,9 +22,9 @@ Digite no terminal (seja no Linux em si ou no terminal integrado do VSCode):
 ```bash
 sudo apt update
 sudo apt install python3-pip python3-venv
-
 git clone https://github.com/dufrensmit/desafioestagioutech
-
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 python3 app.py
 ```
