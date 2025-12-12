@@ -28,5 +28,5 @@ cd desafioestagioutech
 
 pip install -r requirements.txt
 python3 app.py
-
+```
 Abra no seu navegador: http://127.0.0.1:5000
