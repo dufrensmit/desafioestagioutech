@@ -11,6 +11,7 @@ Há 2 rotas do backend para o frontend:
 
 COMO RODAR O PROJETO (em um ambiente Linux):
     digite no terminal (seja no linux em si ou na sua IDE): 
+        
         sudo apt update
         sudo apt install python3-pip python3-venv
 
