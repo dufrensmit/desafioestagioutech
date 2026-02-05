@@ -16,9 +16,9 @@ Há 2 rotas do Backend para o Frontend:
 
 ## Como rodar o projeto (Linux)
 
-Digite no terminal (seja no Linux em si ou no terminal integrado do VSCode):
+Digite no terminal:
 
-### 1. Instalar pré-requisitos
+### 1.1 Instalar pré-requisitos (caso necessário, troque o "apt" por "dnf" ou outro comando correto pra sua versão do linux)
 ```bash
 sudo apt update
 sudo apt install python3-pip python3-venv
