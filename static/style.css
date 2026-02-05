@@ -25,6 +25,14 @@ button {
     margin-bottom: 20px;
 }
 
+button:disabled {
+    background-color: #cccccc !important;
+    color: #666666 !important;
+    cursor:not-allowed;
+    transform: none !important;
+    box-shadow: none;
+}
+
 button:hover {
     background-color: #0056b3;
 }
