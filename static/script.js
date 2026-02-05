@@ -1,4 +1,39 @@
+function ativarCooldownCompartilhado() {
+    const btnPadrao = document.getElementById('btn-padrao');
+    const btnLucas = document.getElementById('btn-lucas');
+
+    if (btnPadrao.disabled || btnLucas.disabled) return false;
+
+    btnPadrao.disabled = true;
+    btnLucas.disabled = true;
+
+    let segundos = 15;
+    
+    btnPadrao.innerText = `Aguarde ${segundos}s...`;
+    btnLucas.innerText = `Aguarde ${segundos}s...`;
+
+    const intervalo = setInterval(() => {
+        segundos--;
+        if (segundos > 0) {
+            btnPadrao.innerText = `Aguarde ${segundos}s...`;
+            btnLucas.innerText = `Aguarde ${segundos}s...`;
+        } else {
+            clearInterval(intervalo);
+            
+            btnPadrao.disabled = false;
+            btnPadrao.innerText = "Carregar Perguntas"; 
+            
+            btnLucas.disabled = false;
+            btnLucas.innerText = "Carregar Desafio do Lucas";
+        }
+    }, 1000);
+
+    return true; // Avisa que o cooldown foi ativado com sucesso
+}
+
 async function carregarPerguntas() {
+
+    if (ativarCooldownCompartilhado() === false) return;
     
     const listaElemento = document.getElementById('lista-perguntas');
     
@@ -42,10 +77,13 @@ async function carregarPerguntas() {
     } catch (erro) {
         // em caso dê erro, mostramos uma mensagem pro usuário
         console.error(erro);
-        listaElemento.innerHTML = '<pErro ao buscar as perguntas.</p>';
+        listaElemento.innerHTML = '<p>Erro ao buscar as perguntas.</p>';
     }
 }
 async function carregarFavoritas() {
+
+    if (ativarCooldownCompartilhado() === false) return;
+
     const listaElemento = document.getElementById('lista-perguntas');
     listaElemento.innerHTML = '<p>Carregando as favoritas do Lucas..</p>';
 
@@ -74,6 +112,6 @@ async function carregarFavoritas() {
 
     } catch (erro) {
         console.error(erro);
-        listaElemento.innerHTML = '<pErro ao buscar as perguntas.</p>';
+        listaElemento.innerHTML = '<p>Erro ao buscar as perguntas.</p>';
     }
 }
